@@ -13,10 +13,12 @@ int main(void)
 	while (alphalow <= 'z')
 		{
 			putchar(alphalow);
+			alphalow++;
 		}
 	while (alphahigh <= 'Z')
 		{
 			putchar(alphahigh);
+			alphahigh++;
 		}
 	putchar ('\n');
 
