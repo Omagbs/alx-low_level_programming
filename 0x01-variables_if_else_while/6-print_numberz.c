@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char base_10 = '0';
+	int base_10 = '0';
 
 	while (base_10 <= '9')
 	{
