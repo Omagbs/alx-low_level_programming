@@ -12,9 +12,8 @@ int main(void)
 	while (alphalow <= 'z')
 	{
 		putchar(alphalow);
-		putchar('\n');
 		alphalow++;
 	}
-	
+	putchar('\n');
 	return (0);
 }
