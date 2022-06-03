@@ -11,16 +11,17 @@ int main(void)
 	char alphahigh = 'A';
 
 	while (alphalow <= 'z')
-		{
-			putchar(alphalow);
-			alphalow++;
-		}
+	{
+		putchar(alphalow);
+		alphalow++;
+	}
 	while (alphahigh <= 'Z')
-		{
-			putchar(alphahigh);
-			alphahigh++;
-		}
-	putchar ('\n');
-
+	{
+		putchar(alphahigh);
+		alphahigh++;
+	}
+	
+	putchar('\n');
+	
 	return (0);
 }
