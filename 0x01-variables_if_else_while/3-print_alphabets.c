@@ -20,8 +20,6 @@ int main(void)
 		putchar(alphahigh);
 		alphahigh++;
 	}
-	
 	putchar('\n');
-	
 	return (0);
 }
