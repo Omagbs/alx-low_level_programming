@@ -7,9 +7,12 @@
 
 int main(void)
 {
-	for (int i = 0; i <= 9; i++)
+	int x = 0;
+
+	while (x <= 9)
 	{
-		printf("%d", i);
+		printf("%d", x);
+		x++;
 	}
 	printf("\n");
 	return (0);
