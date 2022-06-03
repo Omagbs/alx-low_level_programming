@@ -9,7 +9,7 @@ int main(void)
 {
 	char lowverse = 'z';
 
-	while (lowverse >= a)
+	while (lowverse >= 'a')
 	{
 		putchar(lowverse);
 		lowverse--;
