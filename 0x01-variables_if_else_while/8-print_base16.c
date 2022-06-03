@@ -14,12 +14,12 @@ int main(void)
 	while (num <= 9)
 	{
 		putchar(num);
-		putchar++;
+		num++;
 	}
 	while (alpha <= 'f')
 	{
 		putchar(alpha);
-		putchar++;
+		alpha++;
 	}
 	putchar('\n');
 	return (0);
