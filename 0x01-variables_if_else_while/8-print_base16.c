@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	int num = '0';
+	int num = 0;
 
-	char alpha='a';
+	char alpha = 'a';
 
 	while (num <= 9)
 	{
