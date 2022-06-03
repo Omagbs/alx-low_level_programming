@@ -2,12 +2,13 @@
 
 /**
  * main - Entry point
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
 	char lowcase = 'a';
+
 	while (lowcase <= 'z')
 	{
 		if ((lowcase != 'q') && (lowcase != 'e'))
@@ -17,5 +18,6 @@ int main(void)
 		lowcase++;
 	}
 	putchar('\n');
+
 	return (0);
 }
