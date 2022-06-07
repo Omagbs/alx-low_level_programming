@@ -5,6 +5,10 @@
  * Return: Always 0 (Success)
  */
 
+/**
+ * print_alphabet - print lowercase alphabet*
+ */
+
 void print_alphabet(void)
 {
 	char lowcase;
