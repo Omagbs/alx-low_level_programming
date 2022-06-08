@@ -8,8 +8,8 @@
 
 void jack_bauer(void)
 {
-	int hour = 24;
-	
+	int hour = 0;
+
 	int min;
 
 	while (hour <= 24)
