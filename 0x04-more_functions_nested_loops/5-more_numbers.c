@@ -7,12 +7,12 @@
 
 void more_numbers(void)
 {
-	int i;
-
 	int counter;
 
 	for (counter = 1; counter <= 10; counter++)
 	{
+		int i;
+
 		for (i = 0; i <= 14; i++)
 		{
 			if (i / 10 > 0)
