@@ -21,7 +21,7 @@ int _strlen(char *s)
 }
 
 /**
- * _puts_half - prints the second half of a string
+ * puts_half - prints the second half of a string
  * @str: takes the input of the string
  * Return: Nothing
  */
