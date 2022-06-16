@@ -17,4 +17,6 @@ char *cap_string(char *);
 
 char *leet(char *);
 
+int check_seperators(char c);
+
 #endif
