@@ -16,7 +16,10 @@ int check_seperators(char c)
 	while (i < 13)
 	{
 		if (c == seperators[i])
+		{
 			return (1);
+		}
+		i++;
 	}
 	return (0);
 }
