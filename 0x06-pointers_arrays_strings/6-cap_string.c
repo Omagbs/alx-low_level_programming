@@ -11,7 +11,7 @@ int check_seperators(char c)
 {
 	int i = 0;
 
-	char seperators[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'}
+	char seperators[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	
 	while (i < 13)
 	{
