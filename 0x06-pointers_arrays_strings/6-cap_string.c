@@ -32,11 +32,13 @@ int check_seperators(char c)
 
 char *cap_string(char *s)
 {
-	if (s[i] >= 'a' && s[i] <= 'z')
-		s[i] = s[i] - 'a' + 'A';
+	int i = 0;
 
 	while (s[i] != '\0')
 	{
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] -= 32;
+
 		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
 		{
 			s[i + 1] = s[i + 1] - 'a' + 'A';
