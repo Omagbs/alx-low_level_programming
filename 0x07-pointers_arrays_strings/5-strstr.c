@@ -1,5 +1,6 @@
 #include "main.h"
 #define NULL 0
+
 /**
  * strstr -  a function that locates a substring.
  * @haystack: an input string to search in
