@@ -15,7 +15,9 @@ void print_diagsums(int *a, int size)
 
 	int sum2 = 0;
 
-	int row = 0, i = 0;
+	int row = 0;
+
+	int i = 0;
 
 	while(row < size)
 	{
@@ -30,6 +32,7 @@ void print_diagsums(int *a, int size)
 	{
 		i = (row * size) - row;
 		sum2 += a[i];
+		row++;
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
