@@ -28,6 +28,8 @@ void print_diagsums(int *a, int size)
 
 	int row = 1;
 
+	int i = 0;
+
 	while (row <= size)
 	{
 		i = (row * size) - row;
