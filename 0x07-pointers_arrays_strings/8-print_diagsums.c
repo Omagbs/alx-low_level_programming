@@ -24,7 +24,7 @@ void print_diagsums(int *a, int size)
 		row++;
 	}
 
-	row = 1;
+	int row = 1;
 
 	while (row <= size)
 	{
