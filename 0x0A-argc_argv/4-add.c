@@ -31,7 +31,9 @@ bool is_num(char *argvv)
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 1, 0;
+	int i = 1;
+
+	int sum = 0;
 
 	if (argc == 1)
 	{
