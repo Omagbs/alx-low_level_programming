@@ -1,44 +1,60 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory,
- * which contains a copy of the string given as a parameter
- * @str: string to duplicateReturn: pointer to duplicated string in allocated memory
- * Return: pointer to duplicated string in allocated memory
+ * str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer to concatenated string
  */
 
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	unsigned int i = 0;
-
-	char *arr;
-
-	unsigned len = 0;
-
-	if (str ==  NULL)
+	if (s1 == NULL)
 	{
-		return (0);
+		s1 = "";
 	}
-	while (*(str + i))
+	if (s2 == NULL)
 	{
-		i++, len++;
+		s2 = "";
 	}
 
-	arr = malloc(sizeof(char) * len);
+	unsigned int len1 = 0, len2 = 0, i = 0, j = 0;
 
-	if (arr == NULL)
+	while (*(s1 + i))
 	{
-		return(NULL);
+		i++, len1++;
+	}
+	while (*(s2 + j))
+	{
+		j++, len2++;
+	}
+	len2++;
+
+	unsigned int sum = len1 + len2;
+
+	char *concat
+
+	concat = malloc(sizeof(char) * sum);
+
+	if (concat == NULL)
+	{
+		return (NULL);
 	}
 
-	unsigned int j = 0;
+	unsigned int k = 0, int l = 0;
 
-	while (j < len)
+	while (k < len1)
 	{
-		*(arr + j) = *(str + j);
-		j++;
+		*(concat + k) = *(s1 + k);
+		k++;
 	}
-	return (arr);
+	while (l < len2)
+	{
+		*(concat + k) = *(s2 + l);
+		k++, l++;
+	}
+	return (concat);
 }
+
