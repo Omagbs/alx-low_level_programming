@@ -11,11 +11,11 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i = 0;
+	int i = 0;
 
 	char *arr;
 
-	unsigned len = 0;
+	int len = 0;
 
 	if (str ==  NULL)
 	{
@@ -33,7 +33,7 @@ char *_strdup(char *str)
 		return(NULL);
 	}
 
-	unsigned int j = 0;
+	int j = 0;
 
 	while (j < len)
 	{
