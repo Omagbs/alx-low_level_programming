@@ -20,8 +20,9 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	unsigned int len1 = 0, len2 = 0, i = 0, j = 0;
-
+	int len1 = 0, len2 = 0, i = 0, j = 0, k = 0, l = 0, sum;
+	char *concat;
+	
 	while (*(s1 + i))
 	{
 		i++, len1++;
@@ -30,11 +31,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		j++, len2++;
 	}
-	len2++;
 
-	unsigned int sum = len1 + len2;
-
-	char *concat
+	sum = len1 + len2;
 
 	concat = malloc(sizeof(char) * sum);
 
@@ -42,9 +40,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-
-	unsigned int k = 0, int l = 0;
-
 	while (k < len1)
 	{
 		*(concat + k) = *(s1 + k);
