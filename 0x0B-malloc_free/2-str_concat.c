@@ -16,15 +16,11 @@ char *str_concat(char *s1, char *s2)
 	char *concat;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
 
-	
+	if (s2 == NULL)
+		s2 = "";
+
 	while (*(s1 + i))
 	{
 		i++, len1++;
@@ -34,14 +30,12 @@ char *str_concat(char *s1, char *s2)
 		j++, len2++;
 	}
 
-	sum = len1 + len2;
-
+	sum = len1 + len2:
 	concat = malloc(sizeof(char) * sum);
 
 	if (concat == NULL)
-	{
 		return (NULL);
-	}
+
 	while (k < len1)
 	{
 		*(concat + k) = *(s1 + k);
