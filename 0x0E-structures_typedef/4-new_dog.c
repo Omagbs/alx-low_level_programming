@@ -9,10 +9,12 @@
  */
 int len(char *str)
 {
-	int i;
+	int i = 0
 
-	for (i = 0; *(str + i); i++)
-		;
+	while (*(str + i))
+	{
+		i++;
+	}
 	return (i);
 }
 
