@@ -1,80 +1,53 @@
-#include <stdarg.h>
-#include <stdio.h>
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * print_char - prints char
- * @ap: valist
+ * print_all - A function prints anyting.
+ * @format: A list of type of arguments passed to the function.
+ * Return: Nothing
  */
-void print_char(va_list ap)
+void print_all(const char * const format, ...)
 {
-	printf("%c", va_arg(ap, char));
-}
+	va_list ap;
+	char *temp;
+	int i = 0;
 
-/**
- * print_int - print int
- * @ap: valist
- */
-void print_int(va_list ap)
-{
-	printf("%d", va_arg(ap, int));
-}
-
-/**
- * print_float - prints float
- * @ap: valist
- */
-void print_float(va_list ap)
-{
-	printf("%f", va_arg(ap, double));
-}
-
-/**
- * print_string - prints string
- * @ap: valist
- */
-void print_string(va_list ap)
-{
-	char *s;
-
-	s  = va_arg(ap, char*);
-
-	if (s == NULL)
+	va_start(ap, format);
+	while (format == NULL)
 	{
-		printf("(nil)");
+		printf("\n");
 		return;
 	}
-	printf("%s", s);
-}
-
-/**
- * print_all - print varying inputs of ints, chars, floats, and strings
- * @format: an array ofchars signifying which data type to print
- */
-void print_all(const char* const format, ...)
-{
-	char *separator = "";
-	int i, j = 0;
-	va_list ap;
-
-	datatype choice[] = { {'c', print_char}, {'i', print_int}, {'f', print_float}, {'s', print_string}, {'\0', NULL} };
-
-	va_start(va_list, format};
-	while (format != NULL && format[j] != '\0')
+	while (format[i])
 	{
-		i = 0;
-		while (choice[i].letter != '\0')
+		switch (format[i])
 		{
-			if (choice[i].letter == format[j])
-			{
-				printf("%s", separator);
-				choice[i].func(ap);
-				separator = ", ";
-			}
-			i++;
+			case 'c':
+				printf("%c", (char) va_arg(ap, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(ap, int));
+				break;
+			case 'f':
+				printf("%f", (float) va_arg(ap, double));
+				break;
+			case 's':
+				temp = va_arg(ap, char*);
+				if (temp != NULL)
+				{
+					printf("%s", temp);
+					break;
+				}
+				printf("(nil)");
+				break;
 		}
-		j++;
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+					format[i] == 's') && format[(i + 1)] != '\0')
+			printf(", ");
+		i++;
 	}
 	va_end(ap);
-	printf('\n');
+	printf("\n");
 }
