@@ -6,8 +6,8 @@
  * @n: unsigned int
  * Return: binary
  */
- void print_binary(unsigned long int n)
- {
+void print_binary(unsigned long int n)
+{
  	unsigned long int n_copy = n, mask = 1;
 	int len = 0;
 	
